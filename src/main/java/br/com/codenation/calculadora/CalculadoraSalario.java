@@ -17,21 +17,22 @@ public class CalculadoraSalario {
 	
 	
 	private double calcularInss(double salarioBase) {
-		if (salarioBase <= 1500.00)
+		if (salarioBase <= 1500.00) {
 			return salarioBase - (salarioBase * 0.08);
-		else if (salarioBase <= 4000.00)
+		} else if (salarioBase <= 4000.00) {
 			return salarioBase - (salarioBase * 0.09);
-		else
+		} else {
 			return salarioBase - (salarioBase * 0.11);
+		}
 	}
 	
 	private double calcularIrrf(double salarioBase) {
 		
 		double salarioInss = calcularInss(salarioBase);
 		
-		if (salarioBase <= 3000.00) {
+		if (salarioInss <= 3000.00) {
 			return salarioInss;
-		} else if (salarioBase <= 6000.00) {
+		} else if (salarioInss <= 6000.00) {
 			return salarioInss - (salarioInss * 0.075);
 		} else {
 			return salarioInss - (salarioInss * 0.15);
