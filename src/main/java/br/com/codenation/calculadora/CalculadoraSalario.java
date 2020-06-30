@@ -10,8 +10,7 @@ public class CalculadoraSalario {
 		if (salarioBase < salarioMinimo) {
 			return Math.round(0.0);
 		}
-		//Use o Math.round apenas no final do método para arredondar o valor final.
-		//Documentação do método: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#round-double-
+		
 		return Math.round(calcularIrrf(salarioBase));
 	}
 	
@@ -40,6 +39,3 @@ public class CalculadoraSalario {
 	}
 
 }
-/*Dúvidas ou Problemas?
-Manda e-mail para o meajuda@codenation.dev que iremos te ajudar! 
-*/
